@@ -55,6 +55,7 @@ const drinksData = ref([
 
 <template>
   <div id="app" class="container">
+    <h1>2024 Vue 新手營作業 week 1</h1>
     <div v-for="(drink, i) in drinksData" :key="i">
       <div class="card" style="margin-bottom: 1.5rem;">
         <div class="card-body" style="border: solid 1px; padding: 2rem;">
@@ -64,7 +65,11 @@ const drinksData = ref([
           </div>
           <p class="card-text my-2">{{ drink.description }}</p>
           <p class="card-text mb-3">價格：{{ drink.price }}</p>
-          <p class="card-text mb-3">庫存：{{ drink.stock }}</p>
+          <p class="card-text mb-3">庫存：
+            <button type="button">-</button>
+            {{ drink.stock }}
+            <button type="button">+</button>
+          </p>
         </div>
       </div>
     </div>
